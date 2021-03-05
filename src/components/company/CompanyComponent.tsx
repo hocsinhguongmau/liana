@@ -8,7 +8,8 @@ import products from "./images/products.jpg"
 import contact from "./images/contact.jpg"
 
 const CompanyComponent: React.FC = () => {
-	const [isCounting, setIsCounting] = useState(false)
+	const isCounting = true
+	// const [isCounting, setIsCounting] = useState(false)
 	// let scrollY: number = 0
 	// function scroll() {
 	// 	const companySection = document.querySelector(".company") as HTMLElement
