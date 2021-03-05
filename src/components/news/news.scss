@@ -1,0 +1,59 @@
+@import "../../assets/css/mixin.scss";
+
+.news {
+	background-color: $color-bg-gray;
+	margin-top: 64px;
+	padding-top: 47px;
+	padding-bottom: 53px;
+	@include breakpoint(tablet) {
+		margin-top: 30px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.news-items {
+		padding: 46px 15px 0;
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		@include breakpoint(tablet) {
+			padding-top: 30px;
+		}
+		.col {
+			background-color: $color-white;
+			border: 1px solid $color-border;
+			border-radius: 5px;
+			padding: 25px;
+			@include breakpoint(tablet) {
+				padding: 15px;
+			}
+			.news-item {
+				.news-date {
+					color: $color-gray;
+					@extend .font-tiny;
+				}
+				.news-text {
+					margin-top: 15px;
+					@include breakpoint(tablet) {
+						margin-top: 5px;
+					}
+					a {
+						color: $color-gray;
+						font-weight: 600;
+						@extend .font-medium;
+						text-decoration: none;
+						line-height: 23px;
+						@include breakpoint(tablet) {
+							line-height: 18px;
+						}
+						@include breakpoint(desktop) {
+							&:hover {
+								color: $color-bg;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

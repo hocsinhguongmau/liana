@@ -1,0 +1,90 @@
+//colors
+$color-bg: #4c8930;
+$color-hover: #2c700a;
+$color-main: #333;
+$color-gray: #373a3c;
+$color-light: #999;
+$color-bg-gray: #eceeef;
+$color-white: #fff;
+$color-border: #ddd;
+$color-error: #f00;
+
+//breakpoints for responsive
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 1025px) {
+			@content;
+		}
+	} @else if $point == tablet {
+		@media (min-width: 768px) and (max-width: 1024px) {
+			@content;
+		}
+	} @else if $point == mobile {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+}
+
+//font sizes
+.font-tiny {
+	font-size: 13px;
+	@include breakpoint(tablet) {
+		font-size: 11px;
+	}
+}
+.font-small {
+	font-size: 16px;
+	@include breakpoint(tablet) {
+		font-size: 12px;
+	}
+}
+.font-medium {
+	font-size: 20px;
+	@include breakpoint(tablet) {
+		font-size: 14px;
+	}
+}
+.font-large {
+	font-size: 24px;
+	@include breakpoint(tablet) {
+		font-size: 14px;
+	}
+}
+.font-title {
+	font-size: 28px;
+}
+.font-section {
+	font-size: 32px;
+	@include breakpoint(tablet) {
+		font-size: 24px;
+	}
+}
+.font-extra {
+	font-size: 56px;
+	@include breakpoint(tablet) {
+		font-size: 40px;
+	}
+}
+
+//clear float
+.clearfix {
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+//rotate animation
+@-webkit-keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}

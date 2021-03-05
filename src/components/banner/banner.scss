@@ -1,0 +1,37 @@
+@import "../../assets/css/mixin.scss";
+
+.banner {
+	height: 418px;
+	background-image: url(./images/main-banner.jpg);
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	text-align: center;
+	display: table;
+	width: 100%;
+	position: relative;
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		content: "";
+		background-color: rgba(0, 0, 0, 0.2);
+		z-index: 0;
+	}
+	.banner-content {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		z-index: 10;
+		.banner-title {
+			@extend .font-extra;
+			color: $color-white;
+			font-weight: 300;
+			padding-bottom: 40px;
+		}
+	}
+}

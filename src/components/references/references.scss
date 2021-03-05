@@ -1,0 +1,58 @@
+@import "../../assets/css/mixin.scss";
+
+.reference {
+	padding-top: 47px;
+	@include breakpoint(tablet) {
+		padding-top: 30px;
+	}
+	.reference-items {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+		padding: 47px 15px 0;
+		@include breakpoint(tablet) {
+			gap: 15px;
+			padding-top: 30px;
+		}
+		.col {
+			border: 1px solid $color-border;
+			border-radius: 5px;
+		}
+		.reference-img {
+			padding: 25px 0 22px;
+			@include breakpoint(tablet) {
+				padding: 10px 0;
+			}
+			img {
+				vertical-align: top;
+				width: 100%;
+			}
+		}
+		.reference-text {
+			text-align: center;
+			padding: 0 15px 35px;
+			border-top: 1px solid $color-border;
+			@include breakpoint(tablet) {
+				padding-bottom: 15px;
+			}
+			.reference-text-title {
+				@extend .font-large;
+				font-weight: 600;
+				margin-top: 27px;
+				@include breakpoint(tablet) {
+					margin-top: 15px;
+				}
+			}
+			.reference-text-description {
+				margin-top: 17px;
+				line-height: 25px;
+				@extend .font-small;
+				@include breakpoint(tablet) {
+					margin-top: 10px;
+					line-height: 15px;
+				}
+			}
+		}
+	}
+}

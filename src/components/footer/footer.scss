@@ -1,0 +1,95 @@
+@import "../../assets/css/mixin.scss";
+
+.footer {
+	background-color: #000;
+	color: $color-white;
+	padding-top: 48px;
+	padding-bottom: 90px;
+	@include breakpoint(tablet) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.container {
+		padding: 0 30px;
+	}
+	.footer-wrap {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.footer-left {
+		.footer-title {
+			@extend .font-medium;
+			font-weight: 600;
+		}
+		.footer-info {
+			display: table;
+			line-height: 24px;
+			padding-top: 41px;
+			@include breakpoint(tablet) {
+				padding-top: 30px;
+			}
+			.footer-text {
+				display: table-cell;
+				p {
+					&:first-child {
+						font-weight: 600;
+					}
+				}
+			}
+			.footer-button {
+				display: table-cell;
+				vertical-align: bottom;
+				padding-left: 48px;
+				padding-bottom: 4px;
+			}
+		}
+	}
+	.footer-right {
+		text-align: right;
+		padding-top: 5px;
+		display: table;
+		height: 100%;
+		.footer-nav {
+			display: table-row;
+			width: 100%;
+			li {
+				margin-left: 15px;
+				display: inline-block;
+				a {
+					color: $color-white;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		.footer-social {
+			display: table-cell;
+			padding-bottom: 6px;
+			width: 100%;
+			vertical-align: bottom;
+			ul {
+				text-align: right;
+				li {
+					margin-left: 10px;
+					display: inline-block;
+					a {
+						color: $color-white;
+						height: 34px;
+						width: 34px;
+						border-radius: 100%;
+						text-align: center;
+						line-height: 34px;
+						display: block;
+						background-color: $color-bg;
+						&:hover {
+							background-color: $color-hover;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+@import "../../assets/css/mixin.scss";
+
+.company {
+	padding-top: 51px;
+	@include breakpoint(tablet) {
+		padding-top: 30px;
+	}
+	.col {
+		float: left;
+		width: 33.33%;
+		padding: 0 15px;
+		.item {
+			display: block;
+			position: relative;
+			@include breakpoint(desktop) {
+				&:hover {
+					&::after,
+					.text {
+						opacity: 1;
+						transition: all ease-out 0.3s;
+					}
+					.text {
+						top: 0;
+					}
+				}
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+				background-color: rgba(0, 0, 0, 0.3);
+				z-index: 20;
+				border-radius: 5px;
+				@include breakpoint(desktop) {
+					opacity: 0;
+				}
+			}
+			img {
+				border-radius: 5px;
+				width: 100%;
+				position: relative;
+				z-index: 10;
+				vertical-align: top;
+			}
+			.text {
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 30;
+				display: table;
+				@include breakpoint(desktop) {
+					opacity: 0;
+					top: 30px;
+				}
+				span {
+					color: $color-white;
+					@extend .font-title;
+					font-weight: 600;
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+.statistics {
+	padding-top: 72px;
+	@include breakpoint(tablet) {
+		padding-top: 30px;
+	}
+	.container {
+		padding: 0 75px;
+		text-align: center;
+	}
+	.stats-item {
+		display: inline-block;
+		padding: 0 35px;
+		.stats-info {
+			padding-left: 100px;
+			color: $color-gray;
+			position: relative;
+			@include breakpoint(tablet) {
+				padding-left: 70px;
+			}
+			> i {
+				position: absolute;
+				top: 50%;
+				left: -3px;
+				transform: translateY(-50%);
+				@extend .font-extra;
+				color: $color-bg;
+			}
+			.number {
+				@extend .font-extra;
+				font-weight: 300;
+				padding-bottom: 10px;
+				position: relative;
+				.count-effect {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				.placeholder {
+					opacity: 0;
+				}
+			}
+			.title {
+				@extend .font-medium;
+				font-weight: 600;
+				text-align: left;
+			}
+		}
+	}
+}
