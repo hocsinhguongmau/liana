@@ -34,5 +34,5 @@ const NewsComponent: React.FC<InjectionRSSProps> = (props) => (
 
 export default rssEnhancer(
 	NewsComponent,
-	"https://api.allorigins.win/get?url=https://www.lianatech.com/blog.rss"
+	"/cors-proxy/https://www.lianatech.com/blog.rss"
 )
