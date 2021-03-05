@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { CountUp } from "use-count-up"
 
 import "./company.scss"
@@ -8,26 +8,25 @@ import products from "./images/products.jpg"
 import contact from "./images/contact.jpg"
 
 const CompanyComponent: React.FC = () => {
-	const isCounting = true
-	// const [isCounting, setIsCounting] = useState(false)
-	// let scrollY: number = 0
-	// function scroll() {
-	// 	const companySection = document.querySelector(".company") as HTMLElement
-	// 	scrollY = window.pageYOffset
-	// 	if (scrollY > companySection.getBoundingClientRect().top) {
-	// 		setIsCounting(true)
-	// 	}
-	// }
+	const [isCounting, setIsCounting] = useState(false)
+	let scrollY: number = 0
+	function scroll() {
+		const companySection = document.querySelector(".company") as HTMLElement
+		scrollY = window.pageYOffset
+		if (scrollY > companySection.getBoundingClientRect().top) {
+			setIsCounting(true)
+		}
+	}
 
-	// useEffect(() => {
-	// 	function watchScroll() {
-	// 		window.addEventListener("scroll", scroll)
-	// 	}
-	// 	watchScroll()
-	// 	return () => {
-	// 		window.removeEventListener("scroll", scroll)
-	// 	}
-	// }, [])
+	useEffect(() => {
+		function watchScroll() {
+			window.addEventListener("scroll", scroll)
+		}
+		watchScroll()
+		return () => {
+			window.removeEventListener("scroll", scroll)
+		}
+	}, [])
 	return (
 		<div className='company'>
 			<div className='container'>
