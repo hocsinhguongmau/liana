@@ -32,7 +32,4 @@ const NewsComponent: React.FC<InjectionRSSProps> = (props) => (
 	</div>
 )
 
-export default rssEnhancer(
-	NewsComponent,
-	"/cors-proxy/https://www.lianatech.com/blog.rss"
-)
+export default rssEnhancer(NewsComponent, "https://www.lianatech.com/blog.rss")
