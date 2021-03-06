@@ -59,7 +59,7 @@ const SubscribeComponent: React.FC<PageProps> = ({ isOpen, toggleModal }) => {
 				<div className='subscribe-notification modal-content '>
 					<div className='subscribe-text'>
 						<a
-							href='/#'
+							href='/#!'
 							onClick={() => toggleModal()}
 							className='close-modal'>
 							<i className='far fa-times-circle'></i>

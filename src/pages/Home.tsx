@@ -1,8 +1,11 @@
 import React, { useState } from "react"
+import { useMediaQuery } from "react-responsive"
+
 import BannerComponent from "../components/banner/BannerComponent"
 import CompanyComponent from "../components/company/CompanyComponent"
 import FooterComponent from "../components/footer/FooterComponent"
 import HeaderComponent from "../components/header/HeaderComponent"
+import HeaderMobileComponent from "../components/header/HeaderMobileComponent"
 import NewsComponent from "../components/news/NewsComponent"
 import ReferencesComponent from "../components/references/ReferencesComponent"
 import SubscribeComponent from "../components/subscribe/SubscribeComponent"
@@ -18,9 +21,18 @@ const Home: React.FC = () => {
 			body.classList.remove("prevent-scroll")
 		}
 	}
+
+	const desktopHeader = useMediaQuery({
+		query: "(min-device-width: 768px)"
+	})
+	const mobileHeader = useMediaQuery({
+		query: "(max-device-width: 767px)"
+	})
+
 	return (
 		<>
-			<HeaderComponent />
+			{desktopHeader && <HeaderComponent />}
+			{mobileHeader && <HeaderMobileComponent />}
 			<BannerComponent />
 			<CompanyComponent />
 			<NewsComponent />

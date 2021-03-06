@@ -10,20 +10,41 @@
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+	@include breakpoint(mobile) {
+		margin-top: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
 	.news-items {
 		padding: 46px 15px 0;
-		display: grid;
-		grid-auto-flow: column;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 30px;
+		.slick-track {
+			display: flex !important;
+		}
+
+		.slick-slide {
+			height: inherit !important;
+			> div {
+				height: 100%;
+				border: none !important;
+				padding: 0 15px;
+				@include breakpoint(mobile) {
+					padding: 0;
+				}
+			}
+		}
 		@include breakpoint(tablet) {
 			padding-top: 30px;
+		}
+		@include breakpoint(mobile) {
+			padding-top: 15px;
 		}
 		.col {
 			background-color: $color-white;
 			border: 1px solid $color-border;
 			border-radius: 5px;
 			padding: 25px;
+			height: 100%;
+			outline: none;
 			@include breakpoint(tablet) {
 				padding: 15px;
 			}

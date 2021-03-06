@@ -9,6 +9,9 @@ body {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
 	color: $color-main;
+	@include breakpoint(mobile) {
+		padding-top: 63px;
+	}
 }
 
 input[type="text"],
@@ -149,4 +152,9 @@ input {
 
 .prevent-scroll {
 	overflow: hidden;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: $color-bg !important;
 }

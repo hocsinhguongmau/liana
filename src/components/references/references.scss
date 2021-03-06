@@ -5,24 +5,45 @@
 	@include breakpoint(tablet) {
 		padding-top: 30px;
 	}
+	@include breakpoint(mobile) {
+		padding-top: 15px;
+	}
 	.reference-items {
-		display: grid;
-		grid-auto-flow: column;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 30px;
 		padding: 47px 15px 0;
+		.slick-track {
+			display: flex !important;
+		}
+
+		.slick-slide {
+			height: auto !important;
+			> div {
+				height: 100%;
+				border: none !important;
+				padding: 0 15px;
+				@include breakpoint(mobile) {
+					padding: 0 5px;
+				}
+			}
+		}
 		@include breakpoint(tablet) {
-			gap: 15px;
 			padding-top: 30px;
+		}
+		@include breakpoint(mobile) {
+			padding-top: 15px;
 		}
 		.col {
 			border: 1px solid $color-border;
 			border-radius: 5px;
+			height: 99%;
+			outline: none;
 		}
 		.reference-img {
 			padding: 25px 0 22px;
 			@include breakpoint(tablet) {
 				padding: 10px 0;
+			}
+			@include breakpoint(mobile) {
+				padding: 0;
 			}
 			img {
 				vertical-align: top;
@@ -36,12 +57,18 @@
 			@include breakpoint(tablet) {
 				padding-bottom: 15px;
 			}
+			@include breakpoint(mobile) {
+				padding-bottom: 10px;
+			}
 			.reference-text-title {
 				@extend .font-large;
 				font-weight: 600;
 				margin-top: 27px;
 				@include breakpoint(tablet) {
 					margin-top: 15px;
+				}
+				@include breakpoint(mobile) {
+					margin-top: 10px;
 				}
 			}
 			.reference-text-description {
@@ -51,6 +78,10 @@
 				@include breakpoint(tablet) {
 					margin-top: 10px;
 					line-height: 15px;
+				}
+				@include breakpoint(mobile) {
+					margin-top: 5px;
+					line-height: 14px;
 				}
 			}
 		}

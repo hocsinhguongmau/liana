@@ -16,7 +16,7 @@ $color-error: #f00;
 			@content;
 		}
 	} @else if $point == tablet {
-		@media (min-width: 768px) and (max-width: 1024px) {
+		@media (max-width: 1024px) {
 			@content;
 		}
 	} @else if $point == mobile {
@@ -53,17 +53,26 @@ $color-error: #f00;
 }
 .font-title {
 	font-size: 28px;
+	@include breakpoint(mobile) {
+		font-size: 20px;
+	}
 }
 .font-section {
 	font-size: 32px;
 	@include breakpoint(tablet) {
 		font-size: 24px;
 	}
+	@include breakpoint(mobile) {
+		font-size: 18px;
+	}
 }
 .font-extra {
 	font-size: 56px;
 	@include breakpoint(tablet) {
 		font-size: 40px;
+	}
+	@include breakpoint(mobile) {
+		font-size: 28px;
 	}
 }
 

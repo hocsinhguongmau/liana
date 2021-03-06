@@ -5,12 +5,24 @@
 	@include breakpoint(tablet) {
 		padding-top: 30px;
 	}
+	@include breakpoint(mobile) {
+		padding-top: 15px;
+	}
 	.col {
 		float: left;
 		width: 33.33%;
 		padding: 0 15px;
+		@include breakpoint(mobile) {
+			width: 100%;
+			float: none;
+			padding: 10px 0 0;
+			&:first-child {
+				padding-top: 0;
+			}
+		}
 		.item {
 			display: block;
+			overflow: hidden;
 			position: relative;
 			@include breakpoint(desktop) {
 				&:hover {
@@ -76,19 +88,36 @@
 	@include breakpoint(tablet) {
 		padding-top: 30px;
 	}
+	@include breakpoint(mobile) {
+		padding-top: 15px;
+	}
 	.container {
 		padding: 0 75px;
 		text-align: center;
+		@include breakpoint(tablet) {
+			padding: 0 30px;
+		}
+		@include breakpoint(mobile) {
+			padding: 0 30px;
+			text-align: left;
+		}
 	}
 	.stats-item {
 		display: inline-block;
 		padding: 0 35px;
+		@include breakpoint(mobile) {
+			padding: 10px 0;
+			width: 100%;
+		}
 		.stats-info {
 			padding-left: 100px;
 			color: $color-gray;
 			position: relative;
 			@include breakpoint(tablet) {
 				padding-left: 70px;
+			}
+			@include breakpoint(mobile) {
+				padding-left: 40px;
 			}
 			> i {
 				position: absolute;
@@ -107,9 +136,15 @@
 					position: absolute;
 					top: 0;
 					left: 0;
+					@include breakpoint(tablet) {
+						opacity: 0;
+					}
 				}
 				.placeholder {
 					opacity: 0;
+					@include breakpoint(tablet) {
+						opacity: 1;
+					}
 				}
 			}
 			.title {

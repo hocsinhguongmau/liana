@@ -11,6 +11,10 @@
 	display: table;
 	width: 100%;
 	position: relative;
+	@include breakpoint(mobile) {
+		height: 200px;
+		background-attachment: scroll;
+	}
 	&::after {
 		position: absolute;
 		top: 0;
@@ -19,7 +23,7 @@
 		height: 100%;
 		display: block;
 		content: "";
-		background-color: rgba(0, 0, 0, 0.2);
+		background-color: rgba(0, 0, 0, 0.3);
 		z-index: 0;
 	}
 	.banner-content {
@@ -32,6 +36,9 @@
 			color: $color-white;
 			font-weight: 300;
 			padding-bottom: 40px;
+			@include breakpoint(mobile) {
+				padding-bottom: 20px;
+			}
 		}
 	}
 }

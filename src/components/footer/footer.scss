@@ -9,6 +9,7 @@
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+
 	.container {
 		padding: 0 30px;
 	}
@@ -16,6 +17,9 @@
 		display: grid;
 		grid-auto-flow: column;
 		grid-template-columns: repeat(2, 1fr);
+		@include breakpoint(mobile) {
+			display: block;
+		}
 	}
 	.footer-left {
 		.footer-title {
@@ -26,11 +30,20 @@
 			display: table;
 			line-height: 24px;
 			padding-top: 41px;
+			@extend .font-small;
+
 			@include breakpoint(tablet) {
 				padding-top: 30px;
 			}
+			@include breakpoint(mobile) {
+				display: block;
+				padding-top: 15px;
+			}
 			.footer-text {
 				display: table-cell;
+				@include breakpoint(mobile) {
+					display: block;
+				}
 				p {
 					&:first-child {
 						font-weight: 600;
@@ -42,6 +55,11 @@
 				vertical-align: bottom;
 				padding-left: 48px;
 				padding-bottom: 4px;
+				@include breakpoint(mobile) {
+					display: block;
+					padding-left: 0;
+					padding-top: 15px;
+				}
 			}
 		}
 	}
@@ -50,15 +68,33 @@
 		padding-top: 5px;
 		display: table;
 		height: 100%;
+		@include breakpoint(mobile) {
+			text-align: left;
+			display: block;
+		}
 		.footer-nav {
 			display: table-row;
 			width: 100%;
+			@include breakpoint(mobile) {
+				display: block;
+			}
 			li {
 				margin-left: 15px;
 				display: inline-block;
+				@include breakpoint(tablet) {
+					margin-left: 5px;
+				}
+				@include breakpoint(mobile) {
+					display: block;
+					margin: 10px 0;
+				}
+				&:first-child {
+					margin-left: 0;
+				}
 				a {
 					color: $color-white;
 					text-decoration: none;
+					@extend .font-small;
 					&:hover {
 						text-decoration: underline;
 					}
@@ -70,11 +106,17 @@
 			padding-bottom: 6px;
 			width: 100%;
 			vertical-align: bottom;
+			@include breakpoint(mobile) {
+				padding: 10px 0 0;
+			}
 			ul {
 				text-align: right;
 				li {
 					margin-left: 10px;
 					display: inline-block;
+					&:first-child {
+						margin-left: 0;
+					}
 					a {
 						color: $color-white;
 						height: 34px;
