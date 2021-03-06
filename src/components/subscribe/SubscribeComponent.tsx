@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
-
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 import "./subscribe.scss"
 
 interface PageProps {
@@ -12,22 +13,22 @@ type Inputs = {
 }
 
 const SubscribeComponent: React.FC<PageProps> = ({ isOpen, toggleModal }) => {
+	const { t, i18n } = useTranslation()
+
 	const [email, setEmail] = useState("")
 	const { register, handleSubmit, errors } = useForm<Inputs>()
-	const onSubmit: SubmitHandler<Inputs> = (data) => {
+	const onSubmit: SubmitHandler<Inputs> = (data, e: any) => {
 		setEmail(data.subscribe)
 		toggleModal()
+		e.target.reset()
 	}
 	return (
 		<>
 			<div className='subscribe'>
 				<div className='container'>
-					<h3 className='section-title'>
-						Subscribe to our newsletter
-					</h3>
+					<h3 className='section-title'>{t("title.subscribe")}</h3>
 					<div className='subscribe-description'>
-						Follow our story and get the latest promotonial news
-						about our products and events.
+						{t("subscribe.text")}
 					</div>
 					<div className='subscribe-input'>
 						<form onSubmit={handleSubmit(onSubmit)}>
@@ -41,12 +42,12 @@ const SubscribeComponent: React.FC<PageProps> = ({ isOpen, toggleModal }) => {
 							/>
 
 							<button className='button-medium' type='submit'>
-								Subscribe
+								{t("subscribe")}
 							</button>
 							{errors.subscribe && (
 								<>
 									<span className='error-message'>
-										This field is required
+										{t("error.message")}
 									</span>
 								</>
 							)}
@@ -67,10 +68,8 @@ const SubscribeComponent: React.FC<PageProps> = ({ isOpen, toggleModal }) => {
 						<p>
 							<i className='fas fa-envelope-open-text'></i>
 							<br />
-							Hi {email}! <br />
-							Thank you for signing up. You will be the first to
-							know about our new releases. <br />
-							Stay tuned.
+							{t("popup.hi")} {email}! <br />
+							{t("popup.thankyou")}
 						</p>
 					</div>
 				</div>

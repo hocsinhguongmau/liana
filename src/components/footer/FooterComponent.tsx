@@ -1,22 +1,26 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 import "./footer.scss"
 
 const FooterComponent: React.FC = () => {
+	const { t, i18n } = useTranslation()
+
 	return (
 		<div className='footer'>
 			<div className='container'>
 				<div className='footer-wrap'>
 					<div className='footer-left'>
-						<p className='footer-title'>Liana Technologies</p>
+						<p className='footer-title'>{t("footer.liana")}</p>
 						<div className='footer-info'>
 							<div className='footer-text'>
-								<p>Sales and inquiries</p>
-								<p>Email: sales@lianatech.com</p>
-								<p>Phone: +358 10 387 7053</p>
+								<p>{t("footer.sales")}</p>
+								<p>{t("footer.email")}</p>
+								<p>{t("footer.phone")}</p>
 							</div>
 							<div className='footer-button'>
 								<button className='button-small'>
-									Contact us
+									{t("header.contact")}
 								</button>
 							</div>
 						</div>
@@ -25,19 +29,19 @@ const FooterComponent: React.FC = () => {
 						<div className='footer-nav'>
 							<ul>
 								<li>
-									<a href='/#'>Company</a>
+									<a href='/#'>{t("header.company")}</a>
 								</li>
 								<li>
-									<a href='/#'>Products</a>
+									<a href='/#'>{t("header.products")}</a>
 								</li>
 								<li>
-									<a href='/#'>Contact us</a>
+									<a href='/#'>{t("header.contact")}</a>
 								</li>
 								<li>
-									<a href='/#'>News</a>
+									<a href='/#'>{t("header.news")}</a>
 								</li>
 								<li>
-									<a href='/#'>Intranet</a>
+									<a href='/#'>{t("header.intranet")}</a>
 								</li>
 							</ul>
 						</div>

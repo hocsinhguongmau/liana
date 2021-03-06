@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 
 import VanillaSwipe from "vanilla-swipe"
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 
 import "./headerMobile.scss"
 import logo from "./images/logo.png"
@@ -8,6 +10,8 @@ import logo from "./images/logo.png"
 const body = document.body
 
 const HeaderMobileComponent: React.FC = () => {
+	const { t, i18n } = useTranslation()
+
 	//Hide header on scroll down
 	const [didScroll, setDidScroll] = useState(false)
 	let prevScrollpos = window.pageYOffset
@@ -88,7 +92,7 @@ const HeaderMobileComponent: React.FC = () => {
 			</a>
 			<div className={`menu-mobile ${navOpen ? "opened" : ""}`}>
 				<div className='search-box'>
-					<input type='text' placeholder='Search' />
+					<input type='text' placeholder={t("search")} />
 					<button type='submit' className='button-small'>
 						<i className='fas fa-search'></i>
 					</button>
@@ -96,27 +100,27 @@ const HeaderMobileComponent: React.FC = () => {
 				<div className='menu-nav'>
 					<ul>
 						<li>
-							<a href='/#'>News</a>
+							<a href='/#'>{t("header.news")}</a>
 						</li>
 						<li>
-							<a href='/#'>Intranet</a>
+							<a href='/#'>{t("header.intranet")}</a>
 						</li>
 						<li>
-							<a href='/#'>Company</a>
+							<a href='/#'>{t("header.company")}</a>
 						</li>
 						<li>
-							<a href='/#'>Products</a>
+							<a href='/#'>{t("header.products")}</a>
 						</li>
 						<li>
-							<a href='/#'>About us</a>
+							<a href='/#'>{t("header.contact")}</a>
 						</li>
 					</ul>
 				</div>
 				<div className='select-language'>
 					<select>
-						<option value=''>In English</option>
-						<option value=''>Suomeski</option>
-						<option value=''>På Svenska</option>
+						<option value=''>{t("lang.en")}</option>
+						<option value=''>{t("lang.fi")}</option>
+						<option value=''>{t("lang.sw")}</option>
 					</select>
 				</div>
 			</div>

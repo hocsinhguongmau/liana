@@ -1,0 +1,44 @@
+{
+	"header.news": "Uutiset",
+	"header.intranet": "Intranetissä",
+	"header.company": "Yritys",
+	"header.products": "Tuotteet",
+	"header.contact": "Ota yhteyttä",
+	"search": "Hae",
+
+	"lang.en": "Englanniksi",
+	"lang.fi": "Suomeksi",
+	"lang.sw": "Ruotsiksi",
+
+	"learn": "Lisätietoja",
+	"banner": "Digitaalista markkinointia edistävät ohjelmistot",
+	"clients": "Asiakkaat",
+	"employees": "työntekijät",
+	"users": "Päivittäiset käyttäjät",
+
+	"company.company": "Yhtiö",
+	"company.products": "Tuotteet",
+	"company.contact": "Ota yhteyttä",
+
+	"title.references": "Viitteet",
+	"title.news": "Viimeisimmät uutiset",
+	"title.subscribe": "Tilaa uutiskirjeemme",
+
+	"reference.bosch": "Bosch on monikansallinen suunnittelu- ja elektroniikkayritys.",
+	"reference.body": "The Body Shop on maailmanlaajuinen kauneusbrändi, ja sillä on yli 3000 myymälää yli 60 maassa.",
+	"reference.lapland": "Lapland Hotels on Lapin suurin ja monipuolisin hotelliketju.",
+	"reference.ikea": "IKEA on monikansallinen huonekaluliike.",
+
+	"subscribe.text": "Seuraa tarinaamme ja hanki uusimmat myynninedistämisuutiset tuotteistamme ja tapahtumistamme.",
+	"subscribe": "Tilaa",
+
+	"footer.liana": "Liana Technologies",
+	"footer.sales": "Myynti ja tiedustelut",
+	"footer.email": "Sähköposti: sales@lianatech.com",
+	"footer.phone": "Puhelin: +358 10 387 7053",
+
+	"popup.hi": "Hei",
+	"popup.thankyou": "Kiitos ilmoittautumisestasi. Tiedät ensimmäisenä uusista julkaisuistamme. Pysy kuulolla.",
+
+	"error.message": "Tämä kenttä on pakollinen"
+}

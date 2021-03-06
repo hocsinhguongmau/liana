@@ -1,26 +1,31 @@
 import React from "react"
+
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 import "./header.scss"
+
 import logo from "./images/logo.png"
 
 const HeaderComponent: React.FC = () => {
+	const { t, i18n } = useTranslation()
 	return (
 		<div className='header'>
 			<div className='header-top'>
 				<div className='container'>
 					<div className='language-select'>
 						<select>
-							<option value=''>In English</option>
-							<option value=''>Suomeksi</option>
-							<option value=''>På Svenska</option>
+							<option value=''>{t("lang.en")}</option>
+							<option value=''>{t("lang.fi")}</option>
+							<option value=''>{t("lang.sw")}</option>
 						</select>
 					</div>
 					<div className='links'>
 						<ul>
 							<li>
-								<a href='/#'>News</a>
+								<a href='/#'>{t("header.news")}</a>
 							</li>
 							<li>
-								<a href='/#'>Intranet</a>
+								<a href='/#'>{t("header.intranet")}</a>
 							</li>
 						</ul>
 					</div>
@@ -35,23 +40,23 @@ const HeaderComponent: React.FC = () => {
 					</h1>
 					<ul className='navigation'>
 						<li>
-							<a href='/#'>Company</a>
+							<a href='/#'>{t("header.company")}</a>
 						</li>
 						<li>
-							<a href='/#'>Products</a>
+							<a href='/#'>{t("header.products")}</a>
 						</li>
 						<li>
-							<a href='/#'>Contact Us</a>
+							<a href='/#'>{t("header.contact")}</a>
 						</li>
 					</ul>
 					<div className='search-box'>
 						<input
 							type='text'
 							className='input'
-							placeholder='Search'
+							placeholder={t("search")}
 						/>
 						<button className='button-small' type='submit'>
-							Search
+							{t("search")}
 						</button>
 					</div>
 				</div>

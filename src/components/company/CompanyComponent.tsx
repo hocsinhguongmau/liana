@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { CountUp } from "use-count-up"
-
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 import "./company.scss"
 
 import company from "./images/company.jpg"
@@ -8,6 +9,8 @@ import products from "./images/products.jpg"
 import contact from "./images/contact.jpg"
 
 const CompanyComponent: React.FC = () => {
+	const { t, i18n } = useTranslation()
+
 	const [isCounting, setIsCounting] = useState(false)
 	let scrollY: number = 0
 	function scroll() {
@@ -34,7 +37,7 @@ const CompanyComponent: React.FC = () => {
 					<a href='/#' className='item'>
 						<img src={company} alt='Company' />
 						<div className='text'>
-							<span>Company</span>
+							<span>{t("company.company")}</span>
 						</div>
 					</a>
 				</div>
@@ -42,7 +45,7 @@ const CompanyComponent: React.FC = () => {
 					<a href='/#' className='item'>
 						<img src={products} alt='Products' />
 						<div className='text'>
-							<span>Products</span>
+							<span>{t("company.products")}</span>
 						</div>
 					</a>
 				</div>
@@ -50,7 +53,7 @@ const CompanyComponent: React.FC = () => {
 					<a href='/#' className='item'>
 						<img src={contact} alt='Contact' />
 						<div className='text'>
-							<span>Contact</span>
+							<span>{t("company.contact")}</span>
 						</div>
 					</a>
 				</div>
@@ -70,7 +73,7 @@ const CompanyComponent: React.FC = () => {
 								</span>
 								<span className='placeholder'>3000</span>
 							</p>
-							<p className='title'>Clients</p>
+							<p className='title'>{t("clients")}</p>
 						</div>
 					</div>
 					<div className='stats-item'>
@@ -85,7 +88,7 @@ const CompanyComponent: React.FC = () => {
 								</span>
 								<span className='placeholder'>180</span>
 							</p>
-							<p className='title'>Employees</p>
+							<p className='title'>{t("employees")}</p>
 						</div>
 					</div>
 					<div className='stats-item'>
@@ -100,7 +103,7 @@ const CompanyComponent: React.FC = () => {
 								</span>
 								<span className='placeholder'>10000</span>
 							</p>
-							<p className='title'>Daily users</p>
+							<p className='title'>{t("users")}</p>
 						</div>
 					</div>
 				</div>

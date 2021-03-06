@@ -1,10 +1,14 @@
 import React from "react"
 import rssEnhancer, { InjectionRSSProps } from "react-rss"
 import Slider from "react-slick"
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 
 import "./news.scss"
 
 const NewsComponent: React.FC<InjectionRSSProps> = (props) => {
+	const { t, i18n } = useTranslation()
+
 	const settings = {
 		dots: false,
 		infinite: false,
@@ -24,7 +28,7 @@ const NewsComponent: React.FC<InjectionRSSProps> = (props) => {
 	return (
 		<div className='news'>
 			<div className='container'>
-				<h3 className='section-title'>Latest news</h3>
+				<h3 className='section-title'>{t("title.news")}</h3>
 				<div className='news-items'>
 					<Slider {...settings}>
 						{props.rss.items.slice(0, 3).map((item) => {

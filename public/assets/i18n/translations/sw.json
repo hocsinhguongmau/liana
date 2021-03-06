@@ -1,0 +1,43 @@
+{
+	"header.news": "News",
+	"header.intranet": "Intranet",
+	"header.company": "Company",
+	"header.products": "Products",
+	"header.contact": "Contact Us",
+	"search": "Search",
+
+	"lang.en": "In English",
+	"lang.fi": "In Finnish",
+	"lang.sw": "In Swedish",
+
+	"learn": "Learn more",
+	"banner": "Software fueling digital marketing",
+	"clients": "Clients",
+	"employees": "Employees",
+	"users": "Daily users",
+
+	"company.company": "Company",
+	"company.products": "Products",
+	"company.contact": "Contact",
+
+	"title.references": "References",
+	"title.news": "Latest news",
+	"title.subscribe": "Subscribe to our newsletter",
+
+	"reference.bosch": "Bosch is a multinational engineering and electronics company.",
+	"reference.body": "The Body Shop is a global beauty brand and it has more than 3,000 stores in more than 60 countries.",
+	"reference.lapland": "Lapland Hotels is the largest and the most diverse hotel chain in Lapland.",
+	"reference.ikea": "IKEA is a multinational furniture store.",
+
+	"subscribe.text": "Follow our story and get the latest promotonial news about our products and events.",
+	"subscribe": "Subscribe",
+
+	"footer.liana": "Liana Technologies",
+	"footer.sales": "Sales and inquiries",
+	"footer.email": "Email: sales@lianatech.com",
+	"footer.phone": "Phone: +358 10 387 7053",
+
+	"popup.hi": "Hi",
+	"popup.thankyou": "Thank you for signing up. You will be the first to know about our new releases. Stay tuned.",
+	"error.message": "This field is required"
+}

@@ -1,5 +1,7 @@
 import React from "react"
 import Slider from "react-slick"
+import { useTranslation } from "react-i18next"
+import "../../i18n"
 
 import "./references.scss"
 
@@ -9,6 +11,8 @@ import ref3 from "./images/reference-3.png"
 import ref4 from "./images/reference-4.png"
 
 const ReferencesComponent: React.FC = () => {
+	const { t, i18n } = useTranslation()
+
 	const settings = {
 		dots: false,
 		infinite: false,
@@ -28,7 +32,7 @@ const ReferencesComponent: React.FC = () => {
 	return (
 		<div className='reference'>
 			<div className='container'>
-				<h3 className='section-title'>References</h3>
+				<h3 className='section-title'>{t("title.references")}</h3>
 				<div className='reference-items'>
 					<Slider {...settings}>
 						<div className='col'>
@@ -41,8 +45,7 @@ const ReferencesComponent: React.FC = () => {
 										Robert Bosch
 									</p>
 									<p className='reference-text-description'>
-										Bosch is a multinational engineering and
-										electronics company.
+										{t("reference.bosch")}
 									</p>
 								</div>
 							</div>
@@ -57,9 +60,7 @@ const ReferencesComponent: React.FC = () => {
 										The Body Shop
 									</p>
 									<p className='reference-text-description'>
-										The Body Shop is a global beauty brand
-										and it has more than 3,000 stores in
-										more than 60 countries.
+										{t("reference.body")}
 									</p>
 								</div>
 							</div>
@@ -74,8 +75,7 @@ const ReferencesComponent: React.FC = () => {
 										Lapland Hotels
 									</p>
 									<p className='reference-text-description'>
-										Lapland Hotels is the largest and the
-										most diverse hotel chain in Lapland.
+										{t("reference.lapland")}
 									</p>
 								</div>
 							</div>
@@ -88,7 +88,7 @@ const ReferencesComponent: React.FC = () => {
 								<div className='reference-text'>
 									<p className='reference-text-title'>IKEA</p>
 									<p className='reference-text-description'>
-										IKEA is a multinational furniture store.
+										{t("reference.ikea")}
 									</p>
 								</div>
 							</div>
