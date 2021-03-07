@@ -70,6 +70,9 @@ select option {
 		padding: 0 13px;
 		line-height: 33px;
 	}
+	@include breakpoint(tablet) {
+		padding: 0 5px;
+	}
 }
 .input {
 	height: 35px;
