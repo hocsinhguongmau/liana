@@ -1,6 +1,6 @@
 import React from "react"
 import rssEnhancer, { InjectionRSSProps } from "react-rss"
-import Slider from "react-slick"
+// import Slider from "react-slick"
 import { useTranslation } from "react-i18next"
 import "../../i18n"
 
@@ -30,27 +30,27 @@ const NewsComponent: React.FC<InjectionRSSProps> = (props) => {
 			<div className='container'>
 				<h3 className='section-title'>{t("title.news")}</h3>
 				<div className='news-items'>
-					<Slider {...settings}>
-						{props.rss.items.slice(0, 3).map((item) => {
-							return (
-								<div className='col' key={item.title}>
-									<div className='news-item'>
-										<p className='news-date'>
-											{item.pubDate.substring(0, 16)}
-										</p>
-										<p className='news-text'>
-											<a
-												href={item.link}
-												target='_blank'
-												rel='noreferrer'>
-												{item.title}
-											</a>
-										</p>
-									</div>
+					{/* <Slider {...settings}> */}
+					{props.rss.items.slice(0, 3).map((item) => {
+						return (
+							<div className='col' key={item.title}>
+								<div className='news-item'>
+									<p className='news-date'>
+										{item.pubDate.substring(0, 16)}
+									</p>
+									<p className='news-text'>
+										<a
+											href={item.link}
+											target='_blank'
+											rel='noreferrer'>
+											{item.title}
+										</a>
+									</p>
 								</div>
-							)
-						})}
-					</Slider>
+							</div>
+						)
+					})}
+					{/* </Slider> */}
 				</div>
 			</div>
 		</div>
