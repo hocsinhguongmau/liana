@@ -8,17 +8,21 @@ import logo from "./images/logo.png"
 
 const HeaderComponent: React.FC = () => {
 	const { t, i18n } = useTranslation()
+	const changeLanguage = (event: any) => {
+		i18n.changeLanguage(event.target.value)
+	}
 	return (
 		<div className='header'>
 			<div className='header-top'>
 				<div className='container'>
 					<div className='language-select'>
-						<select>
-							<option value=''>{t("lang.en")}</option>
-							<option value=''>{t("lang.fi")}</option>
-							<option value=''>{t("lang.sw")}</option>
+						<select onChange={changeLanguage}>
+							<option value='en'>{t("lang.en")}</option>
+							<option value='fi'>{t("lang.fi")}</option>
+							<option value='sw'>{t("lang.sw")}</option>
 						</select>
 					</div>
+
 					<div className='links'>
 						<ul>
 							<li>

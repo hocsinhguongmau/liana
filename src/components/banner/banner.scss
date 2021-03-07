@@ -35,9 +35,9 @@
 			@extend .font-extra;
 			color: $color-white;
 			font-weight: 300;
-			padding-bottom: 40px;
+			padding: 0 30px 40px;
 			@include breakpoint(mobile) {
-				padding-bottom: 20px;
+				padding: 0 10px 20px;
 			}
 		}
 	}

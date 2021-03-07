@@ -7,7 +7,7 @@ import "../../i18n"
 import "./news.scss"
 
 const NewsComponent: React.FC<InjectionRSSProps> = (props) => {
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
 
 	const settings = {
 		dots: false,

@@ -10,7 +10,11 @@ import logo from "./images/logo.png"
 const body = document.body
 
 const HeaderMobileComponent: React.FC = () => {
+	//multi language
 	const { t, i18n } = useTranslation()
+	const changeLanguage = (event: any) => {
+		i18n.changeLanguage(event.target.value)
+	}
 
 	//Hide header on scroll down
 	const [didScroll, setDidScroll] = useState(false)
@@ -117,10 +121,10 @@ const HeaderMobileComponent: React.FC = () => {
 					</ul>
 				</div>
 				<div className='select-language'>
-					<select>
-						<option value=''>{t("lang.en")}</option>
-						<option value=''>{t("lang.fi")}</option>
-						<option value=''>{t("lang.sw")}</option>
+					<select onChange={changeLanguage}>
+						<option value='en'>{t("lang.en")}</option>
+						<option value='fi'>{t("lang.fi")}</option>
+						<option value='sw'>{t("lang.sw")}</option>
 					</select>
 				</div>
 			</div>

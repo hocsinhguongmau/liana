@@ -13,7 +13,7 @@ type Inputs = {
 }
 
 const SubscribeComponent: React.FC<PageProps> = ({ isOpen, toggleModal }) => {
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
 
 	const [email, setEmail] = useState("")
 	const { register, handleSubmit, errors } = useForm<Inputs>()

@@ -56,13 +56,13 @@
 			@extend .font-medium;
 			@include breakpoint(tablet) {
 				height: 35px;
-				width: calc(100% - 100px);
+				width: calc(100% - 110px);
 			}
 		}
 		button {
 			margin-left: 10px;
 			@include breakpoint(mobile) {
-				width: 90px;
+				width: 100px;
 				text-align: center;
 			}
 		}

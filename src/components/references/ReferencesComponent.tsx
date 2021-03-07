@@ -11,7 +11,7 @@ import ref3 from "./images/reference-3.png"
 import ref4 from "./images/reference-4.png"
 
 const ReferencesComponent: React.FC = () => {
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
 
 	const settings = {
 		dots: false,

@@ -4,7 +4,7 @@ import "../../i18n"
 import "./footer.scss"
 
 const FooterComponent: React.FC = () => {
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
 
 	return (
 		<div className='footer'>
