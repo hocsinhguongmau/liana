@@ -57,4 +57,7 @@ const NewsComponent: React.FC<InjectionRSSProps> = (props) => {
 	)
 }
 
-export default rssEnhancer(NewsComponent, "https://www.lianatech.com/blog.rss")
+export default rssEnhancer(
+	NewsComponent,
+	"http://thingproxy.freeboard.io/https://www.lianatech.com/blog.rss"
+)
