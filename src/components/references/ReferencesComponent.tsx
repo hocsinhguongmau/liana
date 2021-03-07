@@ -1,5 +1,5 @@
 import React from "react"
-import Slider, { Settings } from "react-slick"
+import Slider from "react-slick"
 import { useTranslation } from "react-i18next"
 import "../../i18n"
 
