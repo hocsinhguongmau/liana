@@ -1,28 +1,33 @@
 {
   "files": {
-    "main.css": "/liana/static/css/main.b8abdfa1.chunk.css",
-    "main.js": "/liana/static/js/main.579caa09.chunk.js",
-    "main.js.map": "/liana/static/js/main.579caa09.chunk.js.map",
-    "runtime-main.js": "/liana/static/js/runtime-main.4c45d6b1.js",
-    "runtime-main.js.map": "/liana/static/js/runtime-main.4c45d6b1.js.map",
-    "static/js/2.fc161f6f.chunk.js": "/liana/static/js/2.fc161f6f.chunk.js",
-    "static/js/2.fc161f6f.chunk.js.map": "/liana/static/js/2.fc161f6f.chunk.js.map",
-    "static/js/3.f6dabcbe.chunk.js": "/liana/static/js/3.f6dabcbe.chunk.js",
-    "static/js/3.f6dabcbe.chunk.js.map": "/liana/static/js/3.f6dabcbe.chunk.js.map",
+    "main.css": "/liana/static/css/main.a7c73ea7.chunk.css",
+    "main.js": "/liana/static/js/main.9ed048b6.chunk.js",
+    "main.js.map": "/liana/static/js/main.9ed048b6.chunk.js.map",
+    "runtime-main.js": "/liana/static/js/runtime-main.6810bc35.js",
+    "runtime-main.js.map": "/liana/static/js/runtime-main.6810bc35.js.map",
+    "static/css/2.2295ec49.chunk.css": "/liana/static/css/2.2295ec49.chunk.css",
+    "static/js/2.eaaeb125.chunk.js": "/liana/static/js/2.eaaeb125.chunk.js",
+    "static/js/2.eaaeb125.chunk.js.map": "/liana/static/js/2.eaaeb125.chunk.js.map",
+    "static/js/3.b45ce890.chunk.js": "/liana/static/js/3.b45ce890.chunk.js",
+    "static/js/3.b45ce890.chunk.js.map": "/liana/static/js/3.b45ce890.chunk.js.map",
     "index.html": "/liana/index.html",
-    "static/css/main.b8abdfa1.chunk.css.map": "/liana/static/css/main.b8abdfa1.chunk.css.map",
-    "static/js/2.fc161f6f.chunk.js.LICENSE.txt": "/liana/static/js/2.fc161f6f.chunk.js.LICENSE.txt",
+    "static/css/2.2295ec49.chunk.css.map": "/liana/static/css/2.2295ec49.chunk.css.map",
+    "static/css/main.a7c73ea7.chunk.css.map": "/liana/static/css/main.a7c73ea7.chunk.css.map",
+    "static/js/2.eaaeb125.chunk.js.LICENSE.txt": "/liana/static/js/2.eaaeb125.chunk.js.LICENSE.txt",
     "static/media/company.66de6b42.jpg": "/liana/static/media/company.66de6b42.jpg",
     "static/media/contact.8e7590e9.jpg": "/liana/static/media/contact.8e7590e9.jpg",
+    "static/media/all.min.css": "/liana/static/media/fa-solid-900.f4f93856.woff",
     "static/media/banner.scss": "/liana/static/media/main-banner.20ca3d8a.jpg",
     "static/media/products.125c12c5.jpg": "/liana/static/media/products.125c12c5.jpg",
     "static/media/reference-1.6b2f5ab4.png": "/liana/static/media/reference-1.6b2f5ab4.png",
-    "static/media/reference-4.1d484604.png": "/liana/static/media/reference-4.1d484604.png"
+    "static/media/reference-4.1d484604.png": "/liana/static/media/reference-4.1d484604.png",
+    "static/media/slick-theme.css": "/liana/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.4c45d6b1.js",
-    "static/js/2.fc161f6f.chunk.js",
-    "static/css/main.b8abdfa1.chunk.css",
-    "static/js/main.579caa09.chunk.js"
+    "static/js/runtime-main.6810bc35.js",
+    "static/css/2.2295ec49.chunk.css",
+    "static/js/2.eaaeb125.chunk.js",
+    "static/css/main.a7c73ea7.chunk.css",
+    "static/js/main.9ed048b6.chunk.js"
   ]
 }

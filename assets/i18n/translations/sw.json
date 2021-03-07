@@ -1,0 +1,43 @@
+{
+	"header.news": "Nyheter",
+	"header.intranet": "Intranät",
+	"header.company": "Företag",
+	"header.products": "Produkter",
+	"header.contact": "Kontakta oss",
+	"search": "Sök",
+
+	"lang.en": "På engelska",
+	"lang.fi": "På finska",
+	"lang.sw": "På svenska",
+
+	"learn": "Läs mer",
+	"banner": "Programvara som driver digital marknadsföring",
+	"clients": "kunder",
+	"employees": "Anställda",
+	"users": "Dagliga användare",
+
+	"company.company": "Företag",
+	"company.products": "Produkter",
+	"company.contact": "Kontakt",
+
+	"title.references": "Referenser",
+	"title.news": "Senaste nytt",
+	"title.subscribe": "Prenumerera på vårt nyhetsbrev",
+
+	"reference.bosch": "Bosch är ett multinationellt teknik- och elektronikföretag.",
+	"reference.body": "The Body Shop är ett globalt skönhetsmärke och har mer än 3000 butiker i mer än 60 länder.",
+	"reference.lapland": "Lapland Hotels är den största och mest varierade hotellkedjan i Lappland.",
+	"reference.ikea": "IKEA är en multinationell möbelbutik.",
+
+	"subscribe.text": "Följ vår historia och få de senaste nyheterna om våra produkter och evenemang.",
+	"subscribe": "Prenumerera",
+
+	"footer.liana": "Liana Technologies",
+	"footer.sales": "Försäljning och förfrågningar",
+	"footer.email": "E-post: sales@lianatech.com",
+	"footer.phone": "Telefon: +358 10 387 7053",
+
+	"popup.hi": "Hej",
+	"popup.thankyou": "Tack för att du registrerade dig. Du kommer att bli den första som får veta om våra nya utgåvor. Håll dig uppdaterad.",
+	"error.message": "Detta fält krävs"
+}
