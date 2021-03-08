@@ -81,11 +81,9 @@
 					width: 100%;
 					display: inline-block;
 					text-align: center;
-					transform: translate(0, -50%);
-					-webkit-transform: translate(0, -50%);
-					-moz-transform: translate(0, -50%);
-					-ms-transform: translate(0, -50%);
-					-o-transform: translate(0, -50%);
+					height: 20px;
+					margin-top: -10px;
+					-webkit-font-smoothing: antialiased; /* seems to do the same in Safari */
 				}
 			}
 		}
