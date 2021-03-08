@@ -92,7 +92,8 @@
 			display: block;
 			top: 0;
 			left: 100%;
-			transition: all 0.5s ease-in-out;
+			transition: all 0.15s ease-out;
+			transition-delay: 0.4s;
 		}
 	}
 	.search-box {

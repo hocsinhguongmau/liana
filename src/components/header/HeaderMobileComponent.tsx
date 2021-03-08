@@ -22,13 +22,9 @@ const HeaderMobileComponent: React.FC = () => {
 	const scroll = () => {
 		let currentScrollPos = window.pageYOffset
 		if (prevScrollpos > currentScrollPos) {
-			setTimeout(() => {
-				setDidScroll(false)
-			}, 100)
+			setDidScroll(false)
 		} else {
-			setTimeout(() => {
-				setDidScroll(true)
-			}, 100)
+			setDidScroll(true)
 		}
 		prevScrollpos = currentScrollPos
 	}
