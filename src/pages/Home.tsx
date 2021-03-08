@@ -11,6 +11,13 @@ import ReferencesComponent from "../components/references/ReferencesComponent"
 import SubscribeComponent from "../components/subscribe/SubscribeComponent"
 
 const Home: React.FC = () => {
+	//close popup on esc
+	window.onkeydown = function (event: any) {
+		if (event.keyCode === 27 && isOpen) {
+			toggleModal()
+		}
+	}
+
 	const [isOpen, setIsOpen] = useState(false)
 	const toggleModal = () => {
 		setIsOpen(!isOpen)
