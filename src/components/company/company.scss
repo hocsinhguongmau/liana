@@ -130,6 +130,7 @@
 				position: absolute;
 				top: 50%;
 				left: -3px;
+				-webkit-transform: translateY(-50%);
 				transform: translateY(-50%);
 				@extend .font-extra;
 				color: $color-bg;
@@ -137,6 +138,7 @@
 					position: relative;
 					top: auto;
 					left: auto;
+					-webkit-transform: translate(0);
 					transform: translate(0);
 					padding-bottom: 10px;
 				}

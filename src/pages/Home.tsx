@@ -22,9 +22,12 @@ const Home: React.FC = () => {
 	const toggleModal = () => {
 		setIsOpen(!isOpen)
 		const body = document.body
+		const html = document.documentElement
 		if (isOpen === false) {
+			html.classList.add("prevent-scroll")
 			body.classList.add("prevent-scroll")
 		} else {
+			html.classList.remove("prevent-scroll")
 			body.classList.remove("prevent-scroll")
 		}
 	}

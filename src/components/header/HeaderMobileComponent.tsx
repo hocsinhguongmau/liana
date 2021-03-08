@@ -8,6 +8,7 @@ import "./headerMobile.scss"
 import logo from "./images/logo.png"
 
 const body = document.body
+const html = document.documentElement
 
 const HeaderMobileComponent: React.FC = () => {
 	//multi language
@@ -36,12 +37,14 @@ const HeaderMobileComponent: React.FC = () => {
 		if (navOpen === false) {
 			setTimeout(() => {
 				navButton.classList.add("opened")
+				html.classList.add("prevent-scroll")
 				body.classList.add("prevent-scroll")
 				setNavOpen(true)
 			}, 100)
 		} else {
 			setTimeout(() => {
 				navButton.classList.remove("opened")
+				html.classList.remove("prevent-scroll")
 				body.classList.remove("prevent-scroll")
 				setNavOpen(false)
 			}, 100)

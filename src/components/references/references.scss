@@ -44,10 +44,12 @@
 			}
 			@include breakpoint(mobile) {
 				padding: 0;
+				// text-align: center;
 			}
 			img {
 				vertical-align: top;
 				width: 100%;
+				// display: inline-block;
 			}
 		}
 		.reference-text {
