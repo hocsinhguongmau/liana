@@ -67,6 +67,7 @@
 				left: 0;
 				z-index: 30;
 				display: table;
+				display: inline-flex; //switch from block display
 				@include breakpoint(desktop) {
 					opacity: 0;
 					top: 30px;
@@ -81,9 +82,10 @@
 					width: 100%;
 					display: inline-block;
 					text-align: center;
-					height: 20px;
-					margin-top: -10px;
-					-webkit-font-smoothing: antialiased; /* seems to do the same in Safari */
+					@include breakpoint(mobile) {
+						-webkit-align-self: center; //safari 7+
+						align-self: center;
+					}
 				}
 			}
 		}
