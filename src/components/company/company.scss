@@ -6,7 +6,7 @@
 		padding-top: 30px;
 	}
 	@include breakpoint(mobile) {
-		padding-top: 15px;
+		padding: 15px 15px 0;
 	}
 	.col {
 		float: left;
@@ -75,8 +75,13 @@
 					color: $color-white;
 					@extend .font-title;
 					font-weight: 600;
-					display: table-cell;
-					vertical-align: middle;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					display: inline-block;
+					text-align: center;
+					transform: translateY(-50%);
 				}
 			}
 		}

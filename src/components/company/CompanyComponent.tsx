@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { CountUp } from "use-count-up"
+import Slider from "react-slick"
 import { useTranslation } from "react-i18next"
 import "../../i18n"
 import "./company.scss"
@@ -21,6 +22,23 @@ const CompanyComponent: React.FC = () => {
 		}
 	}
 
+	const settings = {
+		dots: false,
+		infinite: false,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	}
+
 	useEffect(() => {
 		function watchScroll() {
 			window.addEventListener("scroll", scroll)
@@ -33,30 +51,32 @@ const CompanyComponent: React.FC = () => {
 	return (
 		<div className='company'>
 			<div className='container'>
-				<div className='col'>
-					<a href='/#' className='item'>
-						<img src={company} alt='Company' />
-						<div className='text'>
-							<span>{t("company.company")}</span>
-						</div>
-					</a>
-				</div>
-				<div className='col'>
-					<a href='/#' className='item'>
-						<img src={products} alt='Products' />
-						<div className='text'>
-							<span>{t("company.products")}</span>
-						</div>
-					</a>
-				</div>
-				<div className='col'>
-					<a href='/#' className='item'>
-						<img src={contact} alt='Contact' />
-						<div className='text'>
-							<span>{t("company.contact")}</span>
-						</div>
-					</a>
-				</div>
+				<Slider {...settings}>
+					<div className='col'>
+						<a href='/#' className='item'>
+							<img src={company} alt='Company' />
+							<div className='text'>
+								<span>{t("company.company")}</span>
+							</div>
+						</a>
+					</div>
+					<div className='col'>
+						<a href='/#' className='item'>
+							<img src={products} alt='Products' />
+							<div className='text'>
+								<span>{t("company.products")}</span>
+							</div>
+						</a>
+					</div>
+					<div className='col'>
+						<a href='/#' className='item'>
+							<img src={contact} alt='Contact' />
+							<div className='text'>
+								<span>{t("company.contact")}</span>
+							</div>
+						</a>
+					</div>
+				</Slider>
 			</div>
 			<div className='statistics'>
 				<div className='container'>
