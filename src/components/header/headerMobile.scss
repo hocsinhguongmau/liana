@@ -11,11 +11,21 @@
 	left: 0;
 	transition: all 0.3s ease-in-out;
 	height: 63px;
-	-webkit-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	-webkit-font-smoothing: antialiased;
-	perspective: 1000;
+	/* Safari 7.1+ */
+	_::-webkit-full-page-media,
+	_:future,
+	:root .safari_only {
+		color: #0000ff;
+		background-color: #cccccc;
+	}
+	/* Safari 10.1+ */
+	@media not all and (min-resolution: 0.001dpcm) {
+		@media {
+			.safari_only {
+				position: absolute;
+			}
+		}
+	}
 	.nav-button {
 		position: absolute;
 		top: 5px;
