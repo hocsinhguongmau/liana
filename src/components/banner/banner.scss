@@ -11,9 +11,11 @@
 	display: table;
 	width: 100%;
 	position: relative;
+	@include breakpoint(tablet) {
+		background-attachment: scroll;
+	}
 	@include breakpoint(mobile) {
 		height: 200px;
-		background-attachment: scroll;
 	}
 	&::after {
 		position: absolute;
