@@ -172,13 +172,13 @@
 					top: 0;
 					left: 0;
 					@include breakpoint(tablet) {
-						opacity: 0;
+						// opacity: 0;
 					}
 				}
 				.placeholder {
 					opacity: 0;
 					@include breakpoint(tablet) {
-						opacity: 1;
+						// opacity: 1;
 					}
 				}
 			}

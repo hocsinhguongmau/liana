@@ -15,9 +15,16 @@ const CompanyComponent: React.FC = () => {
 	const [isCounting, setIsCounting] = useState(false)
 	let scrollY: number = 0
 	function scroll() {
+		const statisticSection = document.querySelector(
+			".statistics"
+		) as HTMLElement
 		const companySection = document.querySelector(".company") as HTMLElement
+
 		scrollY = window.pageYOffset
-		if (scrollY > companySection.getBoundingClientRect().top) {
+		if (
+			window.screen.height > statisticSection.offsetTop ||
+			scrollY > statisticSection.getBoundingClientRect().top
+		) {
 			setIsCounting(true)
 		}
 	}
@@ -40,6 +47,9 @@ const CompanyComponent: React.FC = () => {
 	}
 
 	useEffect(() => {
+		setTimeout(() => {
+			scroll()
+		}, 1000)
 		function watchScroll() {
 			window.addEventListener("scroll", scroll)
 		}
@@ -50,7 +60,7 @@ const CompanyComponent: React.FC = () => {
 	}, [])
 	return (
 		<div className='company'>
-			<div className='container'>
+			<div className='container company-top'>
 				<Slider {...settings}>
 					<div className='col'>
 						<a href='/#' className='item'>
