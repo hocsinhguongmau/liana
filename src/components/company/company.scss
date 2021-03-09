@@ -67,10 +67,13 @@
 				left: 0;
 				z-index: 30;
 				display: table;
-				display: inline-flex; //switch from block display
+
 				@include breakpoint(desktop) {
 					opacity: 0;
 					top: 30px;
+				}
+				@include breakpoint(mobile) {
+					display: inline-flex;
 				}
 				span {
 					color: $color-white;
@@ -82,6 +85,11 @@
 					width: 100%;
 					display: inline-block;
 					text-align: center;
+					transform: translate(0, -50%);
+					-webkit-transform: translate(0, -50%);
+					-moz-transform: translate(0, -50%);
+					-ms-transform: translate(0, -50%);
+					-o-transform: translate(0, -50%);
 					@include breakpoint(mobile) {
 						-webkit-align-self: center; //safari 7+
 						align-self: center;
